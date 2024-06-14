@@ -46,7 +46,7 @@ const WeatherData = ({weather, error}) => {
                             weather.forecastdays&& weather.forecastdays.map(day => (
                                 <div key={day.date_epoch} className="flex flex-col items-center my-4 space-y-2 text-white lg:my-5">
                                     <span>{dayOfWeek(day.date_epoch)}</span>
-                                    <img className="h-[35%] w-[35%] rounded-full inline-block" src={day.icon} />
+                                    <img className="h-[35%] w-[35%] rounded-full inline-block" src={day.icon} alt="weather-icon" />
                                     <span>{`${day.avgtemp_c}\u00B0 C`}</span>
                                 </div>
                             ))

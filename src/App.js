@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <div className='grid lg:grid-cols-2 place-items-center'>
-        <Header setQuery={setQuery} weather={weather} error={error} />
+        <Header setQuery={setQuery} weather={weather} error={error} query={query} />
         <WeatherData weather={weather} error={error} />
       </div>
     </div>

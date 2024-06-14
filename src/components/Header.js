@@ -16,7 +16,7 @@ const cities = [
         name:"Moscow"
     },
 ];
-const Header = ({setQuery, weather, error}) =>{
+const Header = ({setQuery, weather, error,query}) =>{
     const [city, setCity] = useState("");
     const cityInput = useRef("");
     const handleSubmit = (e) =>{
@@ -28,7 +28,7 @@ const Header = ({setQuery, weather, error}) =>{
         if(city!== ""){
             setQuery({q:city, days:4});
         }
-    },[city]);
+    },[city, setQuery]);
     return(
         <div className="h-[100vh] bg-indigo-700 px-16 py-10 w-[100%] overflow-hidden">
             <div className="">

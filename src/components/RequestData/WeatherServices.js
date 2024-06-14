@@ -1,6 +1,5 @@
 // const BASE_URL = "https://api.openweathermap.org/data/2.5"; /openweather
-const BASE_URL = "http://api.weatherapi.com/v1"; 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const BASE_URL = "https://api.weatherapi.com/v1"; 
 
 const gettime = () =>{
     const date = Date.now();
@@ -45,7 +44,7 @@ const extractWeatherData = (data) =>{
 
 const weatherServices = async(searchParams) =>{
     const url = new URL (BASE_URL + '/forecast.json');
-    url.search = new URLSearchParams({key:API_KEY, ...searchParams});
+    url.search = new URLSearchParams({key:(process.env.REACT_APP_API_KEY), ...searchParams});
         try{
             const response = await fetch(url);
             let errorMessage = null;
